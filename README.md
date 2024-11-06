@@ -22,7 +22,7 @@
    ```
 2. Navigate to the project directory:
    ```bash
-   cd country-explorer
+   cd Explore-World
    ```
 3. Open the `index.html` file in your preferred browser:
    ```bash
