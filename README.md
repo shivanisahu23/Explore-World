@@ -18,7 +18,7 @@
 
 1. Clone the repository to your local machine using:
    ```bash
-   git clone https://github.com/your-username/country-explorer.git
+   git clone https://shivanisahu23.github.io/Explore-World/
    ```
 2. Navigate to the project directory:
    ```bash
