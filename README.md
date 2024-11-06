@@ -2,55 +2,73 @@
 
 ## Project Overview
 
-**Country Explorer** is a web application that allows users to explore information about different countries around the world. It fetches data from the [Rest Countries API](https://restcountries.com/) to display details such as population, region, capital, and more. Users can search for countries, filter them by region, and mark their favorite countries (up to 5 favorites). The application also includes a dark mode feature and a modal to view more detailed information about each country.
+**Country Explorer** is a web application that allows users to explore and interact with data from various countries worldwide. It fetches real-time information from the [Rest Countries API](https://restcountries.com/) and provides a user-friendly interface to search, filter by region, view details, and manage a list of favorite countries. The application also supports dark mode and is fully responsive across different screen sizes and browsers.
 
 ## Features
 
 - **Search Functionality:** Search for countries by name.
-- **Region Filter:** Filter countries by their region (Africa, Americas, Asia, Europe, Oceania, All).
-- **Favorite List:** Add countries to a favorites list (up to 5 countries), stored in local storage.
-- **Detailed View:** Click on a country to view more detailed information in a modal.
-- **Dark Mode:** Toggle between light and dark mode.
-- **Responsive Design:** The website is fully responsive and works on different screen sizes.
-  
-## Tech Stack
+- **Region Filter:** Filter countries by region (Africa, Americas, Asia, Europe, Oceania, All).
+- **Favorite List:** Add countries to your favorites (up to 5), stored locally.
+- **Detailed View:** Click on a country to view detailed information in a modal.
+- **Dark Mode:** Toggle dark and light mode for better accessibility.
+- **Responsive Design:** Works on mobile, tablet, and desktop devices.
+- **Cross-browser Compatibility:** Tested on Chrome, Firefox, and Safari.
 
-- **HTML**
-- **CSS**
-- **JavaScript**
-- **Rest Countries API**
+## Setup Instructions
 
-## Project Structure
+1. Clone the repository to your local machine using:
+   ```bash
+   git clone https://github.com/your-username/country-explorer.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd country-explorer
+   ```
+3. Open the `index.html` file in your preferred browser:
+   ```bash
+   open index.html
+   ```
 
-- **index.html:** The main HTML file that includes the structure of the page.
-- **styles.css:** The CSS file that defines the styles, including light and dark modes.
-- **script.js:** The JavaScript file that handles fetching data from the API, filtering, searching, and managing the favorite list.
+No additional setup is required as the project uses vanilla JavaScript, HTML, and CSS.
 
-## How to Use
+## Design Decisions
 
-1. Clone this repository.
-2. Open `index.html` in your browser.
-3. Search for countries using the search bar.
-4. Filter countries by region using the dropdown menu.
-5. Click on any country to view more details.
-6. Add countries to your favorites by clicking the heart icon (up to 5).
-7. Toggle dark mode by clicking the button at the top right corner.
+- **Favorites Feature:** I implemented a favorite countries feature, where users can select and save up to five countries in local storage. This helps manage state persistently even after a page refresh.
+- **Dark Mode:** The dark mode feature is implemented using CSS variables, allowing for easy theme switching without complex logic.
+- **Responsive Grid Layout:** The countries are displayed in a grid layout using CSS Grid, ensuring the app adjusts gracefully across different screen sizes.
+- **Performance Considerations:** Data is fetched from the Rest Countries API once on page load and then filtered locally to minimize API requests.
 
-## External Libraries
+## Running Tests
 
-- [Font Awesome](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css): Used for icons.
-- [Google Fonts - Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans): Applied font styles.
+To ensure everything works as expected:
 
-## Demo
+1. **Cross-browser Testing:** The app has been tested on major browsers (Chrome, Firefox, and Safari). You can manually test by opening `index.html` in each browser.
+2. **Responsiveness Test:** Resize the browser window to test responsiveness on mobile, tablet, and desktop views. The design adapts to different breakpoints using CSS media queries.
+3. **Favorites Feature:** Test the favorites feature by selecting countries, ensuring they persist even after a page refresh, and limiting the selection to five.
 
-You can view a live demo of this project [here](#).
+If any browser does not behave as expected, please report the issue in the repository's [issues section](#).
+
+## Known Issues & Limitations
+
+- The **language filter** is currently a placeholder and has not been fully implemented.
+- The app is fully functional on Chrome, Firefox, and Safari. However, it has not been tested on Edge or Internet Explorer.
+- **Performance on slow networks** may cause delays in data loading due to API fetching.
+
+## Time Spent
+
+- **Approximate Time Spent:** 10 hours
+  - 3 hours for building the UI and styling.
+  - 4 hours for implementing the JavaScript functionality (API fetching, filtering, and managing favorites).
+  - 2 hours for debugging and testing across browsers.
+  - 1 hour for writing documentation and code cleanup.
 
 ## Future Enhancements
 
-- Implement language filtering feature.
-- Add sorting options for countries (e.g., by population or name).
-- Improve the UI for the country detail modal.
+- Implement language-based filtering.
+- Add sorting functionality (e.g., sorting by population or country name).
+- Improve the UX of the modal for detailed country views.
+- Explore adding a map view for better geographical context.
 
 ## Credits
 
-Developed by **Shivani Sahu**.
+Developed by **Shivani Sahu**
