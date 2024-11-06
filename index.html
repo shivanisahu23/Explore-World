@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information to define character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Countries API</title>
+
+    <!-- External Font Awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    <!-- Link to the external CSS file for custom styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts integration for using a specific font (Nunito Sans) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap">
+</head>
+<body class="dark"> <!-- 'dark' class is applied for dark mode styles -->
+
+    <!-- Header Section with Video Background -->
+    <header class="header">
+        <div class="video-container">
+            <!-- Background video playing in a loop, muted, and set to autoplay -->
+            <video autoplay muted loop class="background-video">
+                <source src="video1.mp4" type="video/mp4">
+                <!-- Fallback text for browsers that do not support the video tag -->
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div> <!-- Dark overlay for better text readability on video -->
+        </div>
+        
+        <!-- Header text displayed over the video background -->
+        <div class="header-content">
+            <h1 id="heading1">Explore, Dream, and Wander</h1>
+        </div>
+        
+        <!-- Button to toggle dark/light mode with an icon (moon) -->
+        <button class="toggle"><i class="far fa-moon moon"></i>Dark Mode</button>
+    </header>
+
+    <!-- Main content section below the header -->
+    <div class="container">
+        <!-- Search input for filtering countries -->
+        <div class="form-control">
+            <input type="text" placeholder="Search country here" class="search">
+            <!-- Search icon next to the input field -->
+            <i class="fas fa-search"></i>
+        </div>
+        
+        <!-- Dropdown filter to choose a region for filtering countries -->
+        <div class="filters">
+            <div>
+                <div class="dropDownCon">
+                    <div class="dropDown">
+                        <!-- Dropdown label for selecting a region -->
+                        <p>CHOOSE REGION</p>
+                        <button><i class="fas fa-chevron-down"></i></button> <!-- Arrow icon for dropdown -->
+                    </div>
+                    <div class="drop">
+                        <!-- Dropdown options for regions -->
+                        <p class="region" data-filter="All">All</p>
+                        <p class="region" data-filter="Africa">Africa</p>
+                        <p class="region" data-filter="Americas">Americas</p>
+                        <p class="region" data-filter="Asia">Asia</p>
+                        <p class="region" data-filter="Europe">Europe</p>
+                        <p class="region" data-filter="Oceania">Oceania</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section where filtered countries will be displayed -->
+    <div class="countries"></div>
+
+    <!-- Section for displaying a list of favorite countries (initially hidden) -->
+    <div class="favorites-section" id="favoritesSection" style="display: none;">
+        <h2>Your Favorites</h2>
+        <ul id="favoritesList"></ul> <!-- List of favorite countries will be dynamically added here -->
+    </div>
+
+    <!-- Modal that pops up with detailed country information (currently shown as a template) -->
+    <div class="countryModal show">
+        <!-- Back button to close the modal -->
+        <button onclick="{ba}" class="back">Back</button>
+        <div class="modal">
+            <!-- Left section of the modal containing the country flag -->
+            <div class="leftModal">
+                <img src="https://flagcdn.com/w320/sa.png" alt=""> <!-- Placeholder flag image -->
+            </div>
+            
+            <!-- Right section of the modal containing country details -->
+            <div class="rightModal">
+                <h1>German</h1> <!-- Country name -->
+                
+                <!-- Favorite button to add the country to the favorites list -->
+                <button class="favorite-icon" aria-label="Add to favorites">
+                    <i class="far fa-heart"></i>
+                </button>
+                
+                <!-- Detailed information about the country -->
+                <div class="modalInfo">
+                    <div class="innerLeft inner">
+                        <p><strong>Native Name:</strong> N/A</p>
+                        <p><strong>Population:</strong> N/A</p>
+                        <p><strong>Region:</strong> N/A</p>
+                        <p><strong>Sub-region:</strong> N/A</p>
+                    </div>
+                    <div class="innerRight inner">
+                        <p><strong>Capital:</strong> N/A</p>
+                        <p><strong>Top Level Domain:</strong> N/A</p>
+                        <p><strong>Currencies:</strong> N/A</p>
+                        <p><strong>Languages:</strong> N/A</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section with credit information -->
+    <div class="footer">
+        <h3>&copy; >> Shivani Sahu</h3>
+    </div>
+
+    <!-- External JavaScript file link for functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
